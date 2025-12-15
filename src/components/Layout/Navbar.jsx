@@ -4,7 +4,7 @@ import logo from "../../assets/logo-desa.png";
 const data = [
   { id: 1, label: "Home", href: "/home" },
   { id: 2, label: "Profile Desa", href: "/profile" },
-  { id: 3, label: "Infografis", href: "#" },
+  { id: 3, label: "Infografis", href: "/infografis" },
   { id: 4, label: "Berita", href: "#" },
 ];
 
