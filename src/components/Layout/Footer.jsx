@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" text-center bg-[#2E7D32] text-white p-5">2025 Power By Wildan Maulana</div>
+      <div className=" text-center bg-primary text-white p-5">2025 Power By Wildan Maulana</div>
     </>
   );
 };
