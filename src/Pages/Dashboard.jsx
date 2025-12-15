@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import assetsData from "@/lib/data";
 import sambutan from "@/assets/poto-kepalaDesa.png";
+import CardPengurus from "@/components/Elements/Card";
 
 const AUTOPLAY_MS = 5000;
 
@@ -63,7 +64,7 @@ const Dashboard = () => {
             <img src={sambutan} alt="" height="350px" width="350px" className=" rounded-full" />
           </div>
           <div className="flex-col justify-center items-center text-center ">
-            <h2 className="font-semibold text-4xl text-blue-600 mt-30">SAMBUTAN KEPALA DESA</h2>
+            <h2 className="font-semibold text-4xl text-[#8D6E63] mt-30">SAMBUTAN KEPALA DESA</h2>
             <h4 className="mb-20">Ujang Bustomi</h4>
             <div className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sint culpa voluptatum numquam impedit ea quos illum molestiae voluptatem. Eligendi nihil libero ipsam laudantium labore animi cupiditate excepturi debitis quod quos
@@ -77,8 +78,18 @@ const Dashboard = () => {
 
       {/* sambutan kepala desa end */}
 
-      {/* lokasi desa */}
-      
+      {/* Struktur desa */}
+
+      <div className="h-screen bg-[#F4F1EC]">
+        <div className="font-semibold text-4xl mt-4 mb-4">Struktur Desa</div>
+        <div className="grid grid-cols-4 gap-3">
+          <CardPengurus />
+          <CardPengurus />
+          <CardPengurus />
+          <CardPengurus />
+        </div>
+      </div>
+      {/* Struktur desa end */}
     </>
   );
 };

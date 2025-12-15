@@ -6,7 +6,7 @@ import logo from "../../assets/logo-desa.png";
 const Navbar = () => {
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-50 navbar flex items-center justify-between p-4 bg-blue-700 shadow-md">
+      <div className="fixed top-0 left-0 w-full z-50 navbar flex items-center justify-between p-4 bg-[#2E7D32] shadow-md">
         <img src={logo} alt="" width="50px" height="50px" />
         <ul className="flex gap-7 font-semibold mr-20 text-lg text-white">
           <li className="text-2xl">

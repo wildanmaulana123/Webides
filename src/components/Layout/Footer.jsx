@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 const Footer = () => {
   return (
     <>
-      <div className="grid grid-cols-4 text-center text-white bg-blue-700 p-3 ">
+      <div className="grid grid-cols-4 text-center text-white bg-[#2E7D32] p-3 ">
         <div className="flex p-2">
           <img src={logo} alt="" width="50px" height="10px" />
           <div>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" text-center bg-blue-700 text-white p-5">2025 Power By Wildan Maulana</div>
+      <div className=" text-center bg-[#2E7D32] text-white p-5">2025 Power By Wildan Maulana</div>
     </>
   );
 };
