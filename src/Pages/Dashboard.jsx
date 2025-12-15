@@ -3,6 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import assetsData from "@/lib/data";
 import sambutan from "@/assets/poto-kepalaDesa.png";
 import CardPengurus from "@/components/Elements/Card";
+import CardPenduduk from "@/components/Elements/CardPenduduk";
 
 const AUTOPLAY_MS = 5000;
 
@@ -81,15 +82,30 @@ const Dashboard = () => {
       {/* Struktur desa */}
 
       <div className="h-screen bg-[#F4F1EC]">
-        <div className="font-semibold text-4xl mt-4 mb-4">Struktur Desa</div>
+        <div className="font-semibold text-4xl text-accent mt-4 mb-4">Struktur Dan Tata Kelola Desa</div>
         <div className="grid grid-cols-4 gap-3">
           <CardPengurus />
           <CardPengurus />
           <CardPengurus />
           <CardPengurus />
         </div>
+        <div className="flex justify-end">
+        <button className="flex  mt-6 bg-secondary rounded-3xl ">Lihat Lebih Banyak</button>
+        </div>
       </div>
       {/* Struktur desa end */}
+
+      {/* Jumlah Penduduk Start */}
+
+      <div className="h-screen p-20">
+        <div className="font-semibold text-4xl text-accent mt-4 mb-4">Jumlah Penduduk</div>
+      <div className="">
+        <CardPenduduk/>
+      </div>
+      </div>
+      {/* Jumlah Penduduk Start */}
+
+
     </>
   );
 };
