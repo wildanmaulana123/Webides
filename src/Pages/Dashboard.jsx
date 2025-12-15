@@ -82,7 +82,7 @@ const Dashboard = () => {
       {/* Struktur desa */}
 
       <div className="h-screen bg-[#F4F1EC]">
-        <div className="font-semibold text-4xl text-accent mt-4 mb-4">Struktur Dan Tata Kelola Desa</div>
+        <div className="font-semibold text-4xl text-accent p-6">Struktur Dan Tata Kelola Desa</div>
         <div className="grid grid-cols-4 gap-3">
           <CardPengurus />
           <CardPengurus />
@@ -90,7 +90,7 @@ const Dashboard = () => {
           <CardPengurus />
         </div>
         <div className="flex justify-end">
-        <button className="flex  mt-6 bg-secondary rounded-3xl ">Lihat Lebih Banyak</button>
+          <button className="flex  mt-6 bg-secondary rounded-3xl ">Lihat Lebih Banyak</button>
         </div>
       </div>
       {/* Struktur desa end */}
@@ -99,13 +99,18 @@ const Dashboard = () => {
 
       <div className="h-screen p-20">
         <div className="font-semibold text-4xl text-accent mt-4 mb-4">Jumlah Penduduk</div>
-      <div className="">
-        <CardPenduduk/>
+        <div className="">
+          <CardPenduduk />
+        </div>
       </div>
+      {/* Jumlah Penduduk End */}
+
+      {/* Berita Desa Start */}
+      <div className="h-screen bg-[#F4F1EC] p-20">
+        <div className="font-semibold text-4xl text-accent mt-4 mb-4">Berita Desa</div>
+        <div>Menampilkan Kegiatan Kegiatan Yang dilakukan Di Desa</div>
       </div>
-      {/* Jumlah Penduduk Start */}
-
-
+      {/* Berita Desa End*/}
     </>
   );
 };

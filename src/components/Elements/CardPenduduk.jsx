@@ -5,9 +5,9 @@ import { Icon } from "@iconify/react";
 const CardPenduduk = () => {
   return (
     <>
-      <div>
+      <div className="p-10">
         <Card className="p-6">
-        <CardHeader className="flex flex-row items-center gap-4">
+        <CardHeader className="flex flex-row justify-around items-center gap-4">
           <div>
             <Icon icon="raphael:people" width="48" height="48" />
           </div>
