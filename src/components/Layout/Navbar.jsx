@@ -5,17 +5,17 @@ const data = [
   { id: 1, label: "Home", href: "/home" },
   { id: 2, label: "Profile Desa", href: "/profile" },
   { id: 3, label: "Infografis", href: "/infografis" },
-  { id: 4, label: "Berita", href: "#" },
+  { id: 4, label: "Berita", href: "/berita" },
 ];
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between p-4 bg-[#2E7D32] shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between p-2 bg-[#2E7D32] shadow-md">
       <div className="flex-shrink-0">
         <img 
           src={logo} 
           alt="Logo Desa" 
-          className="w-[50px] h-[50px] object-contain"
+          className="w-[70px] h-[70px] object-contain"
         />
       </div>
       

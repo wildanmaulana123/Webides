@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className="grid grid-cols-4 text-center text-white bg-[#2E7D32] p-3 ">
         <div className="flex p-2">
-          <img src={logo} alt="" width="50px" height="10px" />
+          <img src={logo} alt="" width="20%" height="20%" />
           <div>
             <h3 className="font-semibold mb-3">Pemerintah Desa Sindangjaya</h3>
             <p>Jl. Raya Sindangjaya No.17, Kec. Cicalengka, Kab. Bandung, Jawa Barat 40395</p>
