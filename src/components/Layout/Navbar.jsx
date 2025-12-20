@@ -11,12 +11,20 @@ const data = [
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between p-2 bg-[#2E7D32] shadow-md">
-      <div className="flex-shrink-0">
+      <div className="flex flex-row items-center">
         <img 
           src={logo} 
           alt="Logo Desa" 
           className="w-[70px] h-[70px] object-contain"
         />
+        <div>
+          <div>
+            <h1 className="text-white text-2xl font-bold ml-1">Desa Sindangjaya</h1>
+          </div>
+          <div>
+            <p className="text-white text-sm ml-1">Kabupaten Tasikmalaya</p>
+          </div>
+        </div>
       </div>
       
       <ul className="flex gap-7 font-semibold mr-20">
