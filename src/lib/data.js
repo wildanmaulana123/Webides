@@ -6,8 +6,8 @@ import hero3 from "../assets/poto-hero3.jpg";
 const assetsData = [
   {
     id: 2,
-    title: "Poto Hero 1",
-    description: "Foto kegiatan masyarakat 1",
+    title: "Selamat Datang di Desa Kami",
+    description: "Desa Sindangjaya Kecamatan Cikalong Tasikmalaya",
     src: hero1,
   },
   {

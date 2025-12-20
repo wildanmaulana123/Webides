@@ -1,250 +1,31 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
-import assetsData from "@/lib/data";
-import sambutan from "@/assets/poto-kepalaDesa.png";
-import CardPenduduk from "@/components/Elements/CardPenduduk";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-
-const AUTOPLAY_MS = 5000;
+import React from "react";
+import HeroCarousel from "@/components/Moduls/HeroCarousel";
+import SectionSambutan from "@/components/Moduls/SectionSambutan";
+import SectionStruktur from "@/components/Moduls/SectionStruktur";
+import JumlahPenduduk from "@/components/Moduls/JumlahPenduduk";
+import BeritaDesa from "@/components/Moduls/SectionBerita";
 
 const Dashboard = () => {
-  const [api, setApi] = useState(null);
-  const intervalRef = useRef(null);
-
-  useEffect(() => {
-    if (!api) return;
-
-    // clear any existing interval
-    if (intervalRef.current) clearInterval(intervalRef.current);
-
-    intervalRef.current = setInterval(() => {
-      try {
-        api.scrollNext();
-      } catch (e) {
-        // ignore if API becomes unavailable
-      }
-    }, AUTOPLAY_MS);
-
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [api]);
-
-  const cardPengurus = [
-    {
-      id: 1,
-      name: "Ujang Bustomi",
-      position: "Kepala Desa",
-      src: "https://placehold.co/600x400/png",
-    }, {
-      id: 2,
-      name: "Siti Aminah",
-      position: "Sekretaris Desa",
-      src: "https://placehold.co/600x400/png",
-    }, {
-      id: 3,
-      name: "Dedi Supriadi",
-      position: "Bendahara Desa",
-      src: "https://placehold.co/600x400/png",
-    }, { 
-      id: 4,
-      name: "Rina Marlina",
-      position: "Kasi Pemerintahan",
-      src: "https://placehold.co/600x400/png",
-    }];
-
-  const berita = [
-    {
-      id: 1,
-      title: "Berita Desa 1",
-      description: "Deskripsi singkat tentang berita desa 1.",
-      src: "https://placehold.co/600x400/png",
-    },
-    {
-      id: 2,
-      title: "Berita Desa 2",
-      description: "Deskripsi singkat tentang berita desa 2.",
-      src: "https://placehold.co/600x400/png",
-    },
-    {
-      id: 3,
-      title: "Berita Desa 3",
-      description: "Deskripsi singkat tentang berita desa 3.",
-      src: "https://placehold.co/600x400/png",
-    },
-    {
-      id: 4,
-      title: "Berita Desa 4",
-      description: "Deskripsi singkat tentang berita desa 4.",
-      src: "https://placehold.co/600x400/png",
-    },
-  ];
-
   return (
     <>
       {/* gambar desa start */}
-
-      <div className="p-6">
-        <Carousel className="w-full" setApi={setApi} opts={{ loop: true }}>
-          <CarouselContent className="flex items-stretch">
-            {assetsData.map((item) => (
-              <CarouselItem key={item.id} className="px-2">
-                <div className="bg-white rounded-lg shadow overflow-hidden">
-                  <img
-                    src={item.src}
-                    alt={item.title}
-                    className="w-full h-64 sm:h-80 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="p-4">
-                    <h3 className="font-semibold">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-
+      <HeroCarousel />
       {/* gambar desa end */}
 
       {/* sambutan kepala desa start */}
-
-      <div className="flex p-6">
-        <div className=" grid grid-cols-2 h-screen text-wrap">
-          <div className="flex justify-center items-center">
-            <img
-              src={sambutan}
-              alt=""
-              height="350px"
-              width="350px"
-              className=" rounded-full"
-            />
-          </div>
-          <div className="flex-col justify-center items-center text-center ">
-            <h2 className="font-semibold text-4xl text-[#8D6E63] mt-30">
-              SAMBUTAN KEPALA DESA
-            </h2>
-            <h4 className="mb-20">Ujang Bustomi</h4>
-            <div className="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sint
-              culpa voluptatum numquam impedit ea quos illum molestiae
-              voluptatem. Eligendi nihil libero ipsam laudantium labore animi
-              cupiditate excepturi debitis quod quos sapiente cumque explicabo
-              suscipit, asperiores neque cum voluptatum dolorem. Commodi
-              cupiditate dolorum voluptatem accusantium maxime illo quod facere
-              saepe expedita repellendus ea incidunt, harum, ad sed dolor cum.
-              Aut non ipsam, neque molestiae impedit ea repellat quidem nostrum,
-              harum similique consectetur deleniti explicabo at maxime id culpa
-              architecto. Modi culpa nobis distinctio eos eius commodi
-              accusantium rerum nesciunt optio fuga doloremque quo, id vero?
-              Pariatur perferendis impedit ipsam alias!
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <SectionSambutan />
       {/* sambutan kepala desa end */}
 
       {/* Struktur desa */}
-
-      <div className="h-screen bg-[#F4F1EC]">
-        <div className="font-semibold text-4xl text-accent p-6">
-          Struktur Dan Tata Kelola Desa
-        </div>
-
-        <div className="grid grid-cols-4 gap-3 mt-6">
-           {cardPengurus.map((items) => (
-           <Card key={items.id} className="flex flex-col">
-              <div >
-                <div className="p-6">
-                  <img
-                    src={items.src}
-                    alt={items.title}
-                    className=""
-                  />
-                  <CardHeader className="p-0 mb-4 my-10">
-                    <CardTitle className="text-3xl font-bold text-accent">
-                      {items.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardDescription className="text-lg font-medium text-accent">
-                    {items.position}
-                  </CardDescription>
-                </div>
-              </div>
-            </Card>
-        ))}
-        </div>
-       
-        <div className="flex justify-end">
-          <button className="flex  mt-6 bg-secondary rounded-3xl ">
-            Lihat Lebih Banyak
-          </button>
-        </div>
-      </div>
+      <SectionStruktur />
       {/* Struktur desa end */}
 
       {/* Jumlah Penduduk Start */}
-
-      <div className="h-screen p-20 pt-30">
-        <div className="font-semibold text-4xl text-accent mt-4 mb-4">
-          Jumlah Penduduk
-        </div>
-        <div className="">
-          <CardPenduduk />
-        </div>
-      </div>
+      <JumlahPenduduk />
       {/* Jumlah Penduduk End */}
 
       {/* Berita Desa Start */}
-      <div className="h-screen bg-[#F4F1EC] p-20">
-        <div className="font-semibold text-4xl text-accent mt-4 mb-4">
-          Berita Desa
-        </div>
-        <div>Menampilkan Kegiatan Kegiatan Yang dilakukan Di Desa</div>
-
-        <div className="grid grid-cols-4 gap-3 mt-6">
-          {berita.map((item) => (
-            <Card key={item.id} className="flex flex-col">
-              <div >
-                <div className="p-6">
-                  <img
-                    src={item.src}
-                    alt={item.title}
-                    className="w-full h-full"
-                  />
-                  <CardHeader className="p-0 mb-4 my-10">
-                    <CardTitle className="text-4xl font-bold text-accent">
-                      {item.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardDescription className="text-lg font-medium text-accent">
-                    {item.description}
-                  </CardDescription>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <BeritaDesa />
       {/* Berita Desa End*/}
     </>
   );
